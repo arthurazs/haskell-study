@@ -49,3 +49,12 @@ doubleSmall x = if x > 100
      then x
      else double x
 
+-- only work on pairs, does not work on triples, 4-tuples, etc
+firstOne = fst (1, 2)
+secondOne = snd (1, 2)
+zipLists = zip [1,2,3] [4,5,6]
+
+triangles = [ (a,b,c) | c <- [1..10], a <- [1..c], b <- [1..a], (a^2) + (b^2) == (c^2) ]
+trianglesPerimeter = [ a+b+c | (a,b,c) <- triangles ]
+trianglesHypothenuse = [ c | (a,b,c) <- triangles ]
+
